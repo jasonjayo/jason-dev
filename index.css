@@ -318,6 +318,7 @@ main section {
 #portfolio {
   height: auto;
   min-height: 100vh;
+  display: none;
   background-image: url(office.jpg);
   background-position: center;
   text-align: center;
@@ -438,7 +439,6 @@ main section {
 
 .footer {
   background: var(--brand-red);
-  border-radius: 30% 30% 0 0;
   color: #fff;
   font-family: "Poppins", sans-serif;
   position: relative;
@@ -593,6 +593,7 @@ main section {
   }
   .footer__button {
     font-size: 2em;
+    padding: 0.2em 0.4em;
   }
   .footer__button-container {
     margin: 50px 0;

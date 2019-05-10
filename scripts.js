@@ -1,3 +1,4 @@
+// Modify navbar on scroll
 window.addEventListener('scroll', function(e) {
     let distanceY = window.pageYOffset || document.documentElement.scrollTop,
         header = document.querySelector("nav");
@@ -13,7 +14,7 @@ window.addEventListener('scroll', function(e) {
 let menu = document.querySelector(".nav-items"),
     menuToggle = document.getElementById("nav-items-toggle"),
     nav = document.querySelector("nav");
-//Navigation menu toggle
+// Navigation menu toggle
 menuToggle.addEventListener("click", (e) => {
     e.stopPropagation();
     toggleMenu(e);
@@ -45,12 +46,12 @@ function showMenu() {
     nav.classList = "nav-items-shown";
 }
 
-//Header arrow
+// Header arrow
 document.getElementById("header-arrow").addEventListener("click", () => {
     document.getElementById("why-me").scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 });
 
-//Smooth scroll for nav items linking to sections in document
+// Smooth scroll for nav items linking to sections in document
 let navItems = document.querySelectorAll(".nav-item");
 navItems.forEach((item) => {
     item.addEventListener("click", function(e) {
@@ -60,7 +61,7 @@ navItems.forEach((item) => {
     })
 });
 
-//Service worker registration
+// Service worker registration
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('sw.js').then(function(registration) {
